@@ -1,0 +1,132 @@
+@import 'bootstrap/scss/bootstrap';
+
+body {
+  background-image: linear-gradient(
+      rgba(228, 224, 225, 0.09),
+      rgba(8, 8, 8, 0.6)
+    ),
+    url('./assets/white-cloud.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  font-family: 'Nunito', sans-serif;
+  overflow: hidden;
+  min-height: 344px;
+}
+
+h1 {
+  text-shadow: 2px 2px 2px black;
+}
+
+#svg5332 {
+  position: absolute;
+  animation-name: run1;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  //   -webkit-animation:linear infinite alternate;
+  //   -webkit-animation-name: run;
+  //   -webkit-animation-duration: 5s;
+}
+
+@keyframes run1 {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+#svg5333 {
+  position: absolute;
+  top: 68%;
+  animation-name: run2;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes run2 {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+#svg5334 {
+  position: absolute;
+  top: 39%;
+  animation-name: run3;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes run3 {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+#svg5335 {
+  position: absolute;
+  top: -17%;
+  animation-name: run3;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes run3 {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.card {
+  width: 60%;
+  height: 60%;
+  border-radius: 1rem;
+  background: #131313;
+  color: white;
+}
+
+form {
+  width: 40%;
+  display: flex;
+  z-index: 1;
+  input {
+    background-color: #2f2f2f8a;
+    color: white;
+    padding: 0.5rem;
+    width: 89%;
+    border: none;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    &:focus-visible {
+      outline: none;
+    }
+  }
+  button {
+    padding: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    border: none;
+    background: white;
+    transition: 0.3s ease all;
+    &:hover {
+      background: #131313;
+      color: #c8c1c1;
+    }
+  }
+}
+
+.fa-search-location {
+  rotate: 90deg;
+}
