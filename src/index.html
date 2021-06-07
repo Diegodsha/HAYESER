@@ -347,38 +347,53 @@
       </svg>
     </div>
     <div class="container d-flex flex-column justify-content-center">
-      <h1 class="text-center text-white mb-5">Have You Ever Seen Rain...?</h1>
-      <div class="search d-flex justify-content-center m-3">
-        <form id="form">
-          <input type="text" placeholder="Search your city" />
-          <button type="button"><i class="fas fa-search-location"></i></button>
-        </form>
-      </div>
-      <div class="card align-self-center p-3">
-        <div class="city d-flex flex-column">
-          <span class="city-name">
-            <i class="fas fa-map-marker-alt"></i> Leon</span
-          >
-          <small class="hour">Fri,June 4 16:39</small>
-        </div>
-        <div class="main-info">
-          <div class="temperature"><i class="fas fa-cloud-sun"></i>22°C</div>
-          <div class="extra-info">
-            <span class="sky">Overcast clouds</span
-            ><span class="humidity"
-              >humidity: <span class="humidity-percentage">64%</span></span
-            ><span class="feels-like"
-              >Feels Like <span class="feels-like-deg">23°C</span>
-            </span>
+      <div class="row justify-content-center h-100">
+        <div class="col-9 d-flex flex-column">
+          <h1 class="text-center text-white mb-5">
+            Have You Ever Seen Rain...?
+          </h1>
+          <div class="search d-flex justify-content-center m-3">
+            <form id="form">
+              <input id="location" type="text" placeholder="Search your city" />
+              <button id="search" type="button">
+                <i class="fas fa-search-location"></i>
+              </button>
+            </form>
           </div>
-        </div>
-        <div class="extra-info">
-          <ul class="list-unstyled d-flex">
-            <li class="wind-speed rounded-pill pill-dark">1.2m/s W</li>
-            <li class="rounded-pill dew-point">16°C</li>
-            <li class="rounded-pill visibility">10.0km</li>
-            <li class="rounded-pill uv">12</li>
-          </ul>
+          <div
+            class="card align-self-center p-3 d-flex justify-content-between"
+          >
+            <div class="city d-flex flex-column">
+              <span class="city-name" style="font-size: 2.5rem">
+                <i class="fas fa-map-marker-alt"></i> Leon</span
+              >
+              <small class="hour">Fri,June 4 16:39</small>
+            </div>
+            <div class="main-info d-flex justify-content-evenly">
+              <div class="temperature" style="font-size: 70px">
+                <i class="fas fa-cloud-sun"></i>22°C
+              </div>
+              <div class="extra-info d-flex flex-column justify-content-evenly">
+                <span class="sky">Overcast clouds</span
+                ><span class="humidity"
+                  >humidity: <span class="humidity-percentage">64%</span></span
+                ><span class="feels-like"
+                  >Feels Like <span class="feels-like-deg">23°C</span>
+                </span>
+              </div>
+            </div>
+            <div
+              class="extra-info justify-content-evenly"
+              style="font-size: 1.5rem"
+            >
+              <ul class="list-unstyled d-flex">
+                <li class="wind-speed rounded-pill pill-dark">1.2m/s W</li>
+                <li class="rounded-pill dew-point">16°C</li>
+                <li class="rounded-pill visibility">10.0km</li>
+                <li class="rounded-pill uv">12</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
