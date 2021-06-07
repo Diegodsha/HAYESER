@@ -347,6 +347,17 @@
       </svg>
     </div>
     <div class="container d-flex flex-column justify-content-center">
+      <div class="alert alert-warning alert-dismissible fade" role="alert">
+        <strong class="alert-msg"
+          >Error! City not found please search again.</strong
+        >
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
+      </div>
       <div class="row justify-content-center h-100">
         <div class="col-9 d-flex flex-column">
           <h1 class="text-center text-white mb-5">
@@ -363,36 +374,121 @@
           <div
             class="card align-self-center p-3 d-flex justify-content-between"
           >
-            <div class="city d-flex flex-column">
-              <span class="city-name" style="font-size: 2.5rem">
-                <i class="fas fa-map-marker-alt"></i> Leon</span
+            <div class="row">
+              <div class="col-12">
+                <div class="city d-flex flex-column text-center">
+                  <span class="city-name" style="font-size: 2.5rem">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="city-name-text">Leon</span>
+                    <span class="country-name">MX</span></span
+                  >
+                  <small class="hour text-secondary">Fri,June 4 16:39</small>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <div class="temperature" style="font-size: 70px">
+                  <span class="weather-icon">
+                    <i class="fas fa-cloud-sun"></i>
+                  </span>
+                  <span class="temperature-text">22°C</span>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <div
+                  class="extra-info d-flex flex-column justify-content-evenly"
+                >
+                  <span class="sky">Overcast clouds</span
+                  ><span class="humidity"
+                    >Humidity:
+                    <span class="humidity-percentage">64%</span></span
+                  ><span class="feels-like"
+                    >Feels Like <span class="feels-like-deg">23°C</span>
+                  </span>
+                </div>
+              </div>
+              <ul
+                class="
+                  extra-info
+                  list-unstyled
+                  d-flex
+                  justify-content-evenly
+                  row
+                "
               >
-              <small class="hour">Fri,June 4 16:39</small>
-            </div>
-            <div class="main-info d-flex justify-content-evenly">
-              <div class="temperature" style="font-size: 70px">
-                <i class="fas fa-cloud-sun"></i>22°C
-              </div>
-              <div class="extra-info d-flex flex-column justify-content-evenly">
-                <span class="sky">Overcast clouds</span
-                ><span class="humidity"
-                  >humidity: <span class="humidity-percentage">64%</span></span
-                ><span class="feels-like"
-                  >Feels Like <span class="feels-like-deg">23°C</span>
-                </span>
-              </div>
-            </div>
-            <div
-              class="extra-info justify-content-evenly"
-              style="font-size: 1.5rem"
-            >
-              <ul class="list-unstyled d-flex">
-                <li class="wind-speed rounded-pill pill-dark">1.2m/s W</li>
-                <li class="rounded-pill dew-point">16°C</li>
-                <li class="rounded-pill visibility">10.0km</li>
-                <li class="rounded-pill uv">12</li>
+                <li
+                  class="
+                    wind-speed
+                    rounded-pill
+                    pill-dark
+                    d-flex
+                    flex-column
+                    col-12 col-lg-3
+                    text-center
+                  "
+                >
+                  <div>
+                    <i class="fas fa-wind me-1"></i
+                    ><span class="wind-speed-text text-secondary">1.2</span>
+                  </div>
+                  <span class="info-desc text-center">Wind speed</span>
+                </li>
+
+                <li
+                  class="
+                    rounded-pill
+                    max-temp
+                    d-flex
+                    flex-column
+                    col-12 col-lg-3
+                    text-center
+                  "
+                >
+                  <div>
+                    <i class="fas fa-thermometer-full"></i>
+                    <span class="max-temp-text text-secondary">16°C</span>
+                  </div>
+                  <span class="info-desc text-center">Max temp</span>
+                </li>
+
+                <li
+                  class="
+                    rounded-pill
+                    visibility
+                    d-flex
+                    flex-column
+                    col-12 col-lg-3
+                    text-center
+                  "
+                >
+                  <div>
+                    <i class="far fa-eye"></i>
+                    <span class="visibility-text text-secondary">10.0km</span>
+                  </div>
+                  <span class="info-desc text-center">Visibility</span>
+                </li>
+
+                <li
+                  class="
+                    rounded-pill
+                    uv
+                    d-flex
+                    flex-column
+                    col-12
+                    text-center
+                    col-lg-3
+                  "
+                >
+                  <div>
+                    <i class="far fa-compass me-1"></i
+                    ><span class="hpa-text text-secondary">866kpa</span>
+                  </div>
+                  <span class="info-desc text-center">Pressure</span>
+                </li>
               </ul>
             </div>
+
+            <!-- <div class="main-info d-flex justify-content-evenly"></div>
+            <div class="extra-info" style="font-size: 1.5rem"></div> -->
           </div>
         </div>
       </div>
