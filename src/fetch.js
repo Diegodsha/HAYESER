@@ -85,7 +85,7 @@ const searchWeather = (e) => {
         body.classList.remove('body-rain');
       }
     })
-    .catch((err) => {
+    .catch(() => {
       alertWarning.classList.add('show');
       cityName.innerText = 'City not found';
       countryName.classList.add('d-none');
