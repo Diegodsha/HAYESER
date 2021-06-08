@@ -65,7 +65,6 @@ const searchWeather = (e) => {
       }
     })
     .catch((err) => {
-      console.log(err, 'failure-check-your-code');
       alertWarning.classList.add('show');
       cityName.innerText = 'City not found';
       countryName.classList.add('d-none');
