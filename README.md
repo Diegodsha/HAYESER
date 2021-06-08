@@ -15,7 +15,7 @@ Weather app with the forecast of over 200,000 countries
 
 ## Preview
 
-![hayeser](https://user-images.githubusercontent.com/70416006/121233728-8a6cde80-c858-11eb-9ac0-264c13ba17c5.png)
+![hayeser2](https://user-images.githubusercontent.com/70416006/121265569-9f5c6880-c87e-11eb-9e04-9932e0f9af4a.png)
 
 ## Built With
 
