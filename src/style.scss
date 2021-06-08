@@ -6,9 +6,10 @@ body {
       rgba(228, 224, 225, 0.09),
       rgba(8, 8, 8, 0.6)
     ),
-    url('./assets/white-cloud.jpg');
+    url('./assets/landscape.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   height: 100vh;
   display: flex;
   font-family: 'Nunito', sans-serif;
@@ -16,11 +17,38 @@ body {
   min-height: 344px;
 }
 
+.body-clouds{
+  background-image:
+    linear-gradient(
+      rgba(228, 224, 225, 0.09),
+      rgba(8, 8, 8, 0.6)
+    ),
+    url('./assets/white-cloud.jpg');
+}
+
+.body-sun{
+  background-image:
+    linear-gradient(
+      rgba(228, 224, 225, 0.09),
+      rgba(8, 8, 8, 0.6)
+    ),
+    url('./assets/sunligth.jpg');
+}
+
+.body-rain{
+  background-image:
+    linear-gradient(
+      rgba(228, 224, 225, 0.09),
+      rgba(8, 8, 8, 0.6)
+    ),
+    url('./assets/rain.jpg');
+}
+
 h1 {
   text-shadow: 2px 2px 2px black;
 }
 
-#svg5332 {
+.cloud-1 {
   position: absolute;
   animation-name: run1;
   animation-duration: 8s;
@@ -38,7 +66,7 @@ h1 {
   }
 }
 
-#svg5333 {
+.cloud-2 {
   position: absolute;
   top: 68%;
   animation-name: run2;
@@ -57,7 +85,7 @@ h1 {
   }
 }
 
-#svg5334 {
+.cloud-3 {
   position: absolute;
   top: 39%;
   animation-name: run3;
@@ -76,16 +104,16 @@ h1 {
   }
 }
 
-#svg5335 {
+.cloud-4 {
   position: absolute;
   top: -17%;
-  animation-name: run3;
+  animation-name: run4;
   animation-duration: 15s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 
-@keyframes run3 {
+@keyframes run4 {
   0% {
     left: -100%;
   }

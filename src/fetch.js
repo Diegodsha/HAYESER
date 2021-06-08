@@ -1,5 +1,6 @@
 const moment = require('moment');
 
+const body = document.querySelector('body')
 const form = document.getElementById('form');
 const alertWarning = document.querySelector('.alert-warning');
 const alertMsg = document.querySelector('.alert-msg');
@@ -48,10 +49,19 @@ const searchWeather = (e) => {
 
       if (sky.innerText.includes('clouds')) {
         icon.innerHTML = '<i class="fas fa-cloud-sun"></i>';
+        body.classList.add('body-clouds')
+        body.classList.remove('body-sun')
+        body.classList.remove('body-rain')
       } else if (sky.innerText.includes('rain')) {
         icon.innerHTML = '<i class="fas fa-cloud-rain"></i>';
+        body.classList.remove('body-clouds')
+        body.classList.remove('body-sun')
+        body.classList.add('body-rain')
       } else if (sky.innerText.includes('clear')) {
         icon.innerHTML = '<i class="fas fa-sun"></i>';
+        body.classList.remove('body-clouds')
+        body.classList.add('body-sun')
+        body.classList.remove('body-rain')
       }
     })
     .catch((err) => {
