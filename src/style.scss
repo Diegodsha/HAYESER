@@ -25,9 +25,6 @@ h1 {
   animation-duration: 8s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  //   -webkit-animation:linear infinite alternate;
-  //   -webkit-animation-name: run;
-  //   -webkit-animation-duration: 5s;
 }
 
 @keyframes run1 {
@@ -90,8 +87,6 @@ h1 {
 }
 
 .card {
-  // width: 80%;
-  // height: 60%;
   border-radius: 1rem;
   background: #131313;
   color: white;

@@ -22,7 +22,7 @@ const searchWeather = (e) => {
 
   if (location.value == '') {
     alertWarning.classList.add('show');
-    alertMsg.innerText = 'Cannot search empty city';
+    alertMsg.innerText = 'Cannot search empty city, e.g: Seatle, US';
     cityName.innerText = 'Empty city';
     return;
   }
