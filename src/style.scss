@@ -1,7 +1,8 @@
 @import 'bootstrap/scss/bootstrap';
 
 body {
-  background-image: linear-gradient(
+  background-image:
+    linear-gradient(
       rgba(228, 224, 225, 0.09),
       rgba(8, 8, 8, 0.6)
     ),
@@ -31,6 +32,7 @@ h1 {
   0% {
     left: -100%;
   }
+
   100% {
     left: 100%;
   }
@@ -44,10 +46,12 @@ h1 {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
+
 @keyframes run2 {
   0% {
     left: -100%;
   }
+
   100% {
     left: 100%;
   }
@@ -61,14 +65,17 @@ h1 {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
+
 @keyframes run3 {
   0% {
     left: -100%;
   }
+
   100% {
     left: 100%;
   }
 }
+
 #svg5335 {
   position: absolute;
   top: -17%;
@@ -77,10 +84,12 @@ h1 {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
+
 @keyframes run3 {
   0% {
     left: -100%;
   }
+
   100% {
     left: 100%;
   }
@@ -90,9 +99,11 @@ h1 {
   border-radius: 1rem;
   background: #131313;
   color: white;
+
   .city-name {
     font-size: 2.5rem;
   }
+
   .temperature {
     font-size: 70px;
   }
@@ -102,6 +113,7 @@ form {
   width: 40%;
   display: flex;
   z-index: 1;
+
   input {
     background-color: #2f2f2f8a;
     color: white;
@@ -110,10 +122,12 @@ form {
     border: none;
     border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
+
     &:focus-visible {
       outline: none;
     }
   }
+
   button {
     padding: 0.5rem;
     border-top-right-radius: 0.5rem;
@@ -121,6 +135,7 @@ form {
     border: none;
     background: white;
     transition: 0.3s ease all;
+
     &:hover {
       background: #131313;
       color: #c8c1c1;
@@ -144,6 +159,7 @@ ul {
 @media only screen and (max-width: 989px) {
   form {
     width: 100%;
+
     input {
       width: 100%;
     }
@@ -159,6 +175,7 @@ ul {
     .city-name {
       font-size: 2rem;
     }
+
     .temperature {
       font-size: 60px;
     }

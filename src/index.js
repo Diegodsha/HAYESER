@@ -1,6 +1,6 @@
 import 'bootstrap';
 import './style.scss';
-import { searchWeather } from './fetch';
+import searchWeather from './fetch';
 
 const searchBtn = document.getElementById('search');
 

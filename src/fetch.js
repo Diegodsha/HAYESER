@@ -1,4 +1,5 @@
-var moment = require('moment');
+const moment = require('moment');
+
 const form = document.getElementById('form');
 const alertWarning = document.querySelector('.alert-warning');
 const alertMsg = document.querySelector('.alert-msg');
@@ -16,11 +17,17 @@ const visibility = document.querySelector('.visibility-text');
 const pressure = document.querySelector('.hpa-text');
 const icon = document.querySelector('.weather-icon');
 
+async function getWeatherData(url = '') {
+  let response = await fetch(url);
+  let weatherObj = await response.json();
+  return weatherObj;
+}
+
 const searchWeather = (e) => {
   e.preventDefault();
   const cityCountry = location.value.trim().split(/[ ,]+/);
 
-  if (location.value == '') {
+  if (location.value === '') {
     alertWarning.classList.add('show');
     alertMsg.innerText = 'Cannot search empty city, e.g: Seatle, US';
     cityName.innerText = 'Empty city';
@@ -60,10 +67,4 @@ const searchWeather = (e) => {
   form.reset();
 };
 
-async function getWeatherData(url = '') {
-  let response = await fetch(url);
-  let weatherObj = await response.json();
-  return weatherObj;
-}
-
-export { searchWeather };
+export default searchWeather;
