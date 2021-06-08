@@ -347,7 +347,15 @@
       </svg>
     </div>
     <div class="container d-flex flex-column justify-content-center">
-      <div class="alert alert-warning alert-dismissible fade" role="alert">
+      <div
+        class="
+          alert alert-warning alert-dismissible
+          fade
+          position-absolute
+          top-0
+        "
+        role="alert"
+      >
         <strong class="alert-msg"
           >Error! City not found please search again.</strong
         >
@@ -375,9 +383,9 @@
             class="card align-self-center p-3 d-flex justify-content-between"
           >
             <div class="row">
-              <div class="col-12">
+              <div class="col-12 mb-lg-3 mb-0">
                 <div class="city d-flex flex-column text-center">
-                  <span class="city-name" style="font-size: 2.5rem">
+                  <span class="city-name">
                     <i class="fas fa-map-marker-alt"></i>
                     <span class="city-name-text">Leon</span>
                     <span class="country-name">MX</span></span
@@ -385,20 +393,33 @@
                   <small class="hour text-secondary">Fri,June 4 16:39</small>
                 </div>
               </div>
-              <div class="col-12 col-lg-6">
-                <div class="temperature" style="font-size: 70px">
+              <div class="col-12 col-lg-6 mb-lg-5 text-center my-3 my-md-0">
+                <div class="temperature d-flex">
                   <span class="weather-icon">
                     <i class="fas fa-cloud-sun"></i>
                   </span>
                   <span class="temperature-text">22°C</span>
                 </div>
               </div>
-              <div class="col-12 col-lg-6">
+              <div
+                class="
+                  col-12 col-lg-6
+                  d-flex
+                  justify-content-center
+                  align-items-center
+                  mb-lg-5 mb-3
+                "
+              >
                 <div
-                  class="extra-info d-flex flex-column justify-content-evenly"
+                  class="
+                    extra-info
+                    d-flex
+                    flex-lg-column
+                    justify-content-evenly
+                  "
                 >
-                  <span class="sky">Overcast clouds</span
-                  ><span class="humidity"
+                  <span class="sky me-4 text-center">Overcast clouds</span
+                  ><span class="humidity me-4 text-center"
                     >Humidity:
                     <span class="humidity-percentage">64%</span></span
                   ><span class="feels-like"
@@ -422,8 +443,9 @@
                     pill-dark
                     d-flex
                     flex-column
-                    col-12 col-lg-3
+                    col-6 col-lg-3
                     text-center
+                    mb-lg-4 mb-2
                   "
                 >
                   <div>
@@ -439,7 +461,7 @@
                     max-temp
                     d-flex
                     flex-column
-                    col-12 col-lg-3
+                    col-6 col-lg-3
                     text-center
                   "
                 >
@@ -456,7 +478,7 @@
                     visibility
                     d-flex
                     flex-column
-                    col-12 col-lg-3
+                    col-6 col-lg-3
                     text-center
                   "
                 >
@@ -473,9 +495,8 @@
                     uv
                     d-flex
                     flex-column
-                    col-12
+                    col-6 col-lg-3
                     text-center
-                    col-lg-3
                   "
                 >
                   <div>

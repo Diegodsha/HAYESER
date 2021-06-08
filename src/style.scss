@@ -90,11 +90,17 @@ h1 {
 }
 
 .card {
-  width: 80%;
-  height: 60%;
+  // width: 80%;
+  // height: 60%;
   border-radius: 1rem;
   background: #131313;
   color: white;
+  .city-name {
+    font-size: 2.5rem;
+  }
+  .temperature {
+    font-size: 70px;
+  }
 }
 
 form {
@@ -138,4 +144,23 @@ form {
 
 ul {
   font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 989px) {
+  form {
+    width: 100%;
+    input {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  ul {
+    font-size: 1rem;
+  }
+
+  .temperature {
+    font-size: 60px;
+  }
 }

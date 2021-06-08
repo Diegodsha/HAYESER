@@ -26,7 +26,7 @@ const searchWeather = (e) => {
   if (location.value == '') {
     alertWarning.classList.add('show');
     alertMsg.innerText = 'Cannot search empty city';
-    cityName.innerText = 'Cannot search empty city';
+    cityName.innerText = 'Empty city';
     return;
   }
   getWeatherData(
@@ -55,7 +55,7 @@ const searchWeather = (e) => {
     .catch((err) => {
       console.log(err, 'failure-check-your-code');
       alertWarning.classList.add('show');
-      cityName.innerText = 'Error! City not found please search again.';
+      cityName.innerText = 'City not found';
       countryName.classList.add('d-none');
     });
 
