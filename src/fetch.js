@@ -18,8 +18,8 @@ const pressure = document.querySelector('.hpa-text');
 const icon = document.querySelector('.weather-icon');
 
 async function getWeatherData(url = '') {
-  let response = await fetch(url);
-  let weatherObj = await response.json();
+  const response = await fetch(url);
+  const weatherObj = await response.json();
   return weatherObj;
 }
 
@@ -38,15 +38,15 @@ const searchWeather = (e) => {
   )
     .then((data) => {
       cityName.innerText = data.name;
-      countryName.innerText = data['sys'].country;
-      temperature.innerText = `${Math.floor(data['main'].temp)}°C`;
-      sky.innerText = data['weather']['0'].description;
-      humidity.innerText = `${data['main'].humidity}%`;
-      feelsLike.innerText = `${Math.floor(data['main'].feels_like)}°C`;
-      windSpeed.innerText = `${data['wind'].speed} m/s`;
-      maxTemp.innerText = `${data['main'].temp_max}°C`;
+      countryName.innerText = data.sys.country;
+      temperature.innerText = `${Math.floor(data.main.temp)}°C`;
+      sky.innerText = data.weather['0'].description;
+      humidity.innerText = `${data.main.humidity}%`;
+      feelsLike.innerText = `${Math.floor(data.main.feels_like)}°C`;
+      windSpeed.innerText = `${data.wind.speed} m/s`;
+      maxTemp.innerText = `${data.main.temp_max}°C`;
       visibility.innerText = `${data.visibility / 1000} km`;
-      pressure.innerText = `${data['main'].pressure}hPa`;
+      pressure.innerText = `${data.main.pressure}hPa`;
 
       if (sky.innerText.includes('clouds')) {
         icon.innerHTML = '<i class="fas fa-cloud-sun"></i>';
