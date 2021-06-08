@@ -33,9 +33,7 @@ const searchWeather = (e) => {
     cityName.innerText = 'Empty city';
     return;
   }
-  getWeatherData(
-    `https://api.openweathermap.org/data/2.5/weather?q=${cityCountry[0]},${cityCountry[1]}&appid=b4a9c69d12afbe1ee38ffe1d3953a1c3&units=metric`
-  )
+  getWeatherData(`https://api.openweathermap.org/data/2.5/weather?q=${cityCountry[0]},${cityCountry[1]}&appid=b4a9c69d12afbe1ee38ffe1d3953a1c3&units=metric`)
     .then((data) => {
       cityName.innerText = data.name;
       countryName.innerText = data.sys.country;
