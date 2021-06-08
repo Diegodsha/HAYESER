@@ -1,6 +1,6 @@
-import moment from 'moment'
+import moment from 'moment';
 
-const body = document.querySelector('body')
+const body = document.querySelector('body');
 const form = document.getElementById('form');
 const alertWarning = document.querySelector('.alert-warning');
 const alertMsg = document.querySelector('.alert-msg');
@@ -22,12 +22,12 @@ const getWeatherData = async (url = '') => {
   const response = await fetch(url);
   const weatherObj = await response.json();
   return weatherObj;
-}
+};
 
 const searchWeather = (e) => {
   e.preventDefault();
   const cityCountry = location.value.trim().split(/[ ,]+/);
-  
+
   if (location.value === '') {
     alertWarning.classList.add('show');
     alertMsg.innerText = 'Cannot search empty city, e.g: Seatle, US';
@@ -35,8 +35,8 @@ const searchWeather = (e) => {
     return;
   }
   getWeatherData(`https://api.openweathermap.org/data/2.5/weather?q=${cityCountry[0]},${cityCountry[1]}&appid=b4a9c69d12afbe1ee38ffe1d3953a1c3&units=metric`)
-  .then((data) => {
-      const formSwitch = document.querySelector('.form-switch')
+    .then((data) => {
+      const formSwitch = document.querySelector('.form-switch');
       cityName.innerText = data.name;
       countryName.innerText = data.sys.country;
       temperature.innerText = `${Math.floor(data.main.temp)}°C`;
@@ -50,36 +50,40 @@ const searchWeather = (e) => {
 
       const changeTemp = () => {
         if (temperature.innerText.includes('C')) {
-          feelsLike.innerText = `${(Math.floor(data.main.feels_like) * 9/5 + 32)}°F`;
-          temperature.innerText = `${(Math.floor(data.main.temp) * 9/5 + 32)}°F`;
-          maxTemp.innerText = `${Math.floor(data.main.temp_max) * 9/5 + 32}°F`;
-        }else if (temperature.innerText.includes('F')){
-
+          feelsLike.innerText = `${
+            (Math.floor(data.main.feels_like) * 9) / 5 + 32
+          }°F`;
+          temperature.innerText = `${
+            (Math.floor(data.main.temp) * 9) / 5 + 32
+          }°F`;
+          maxTemp.innerText = `${
+            (Math.floor(data.main.temp_max) * 9) / 5 + 32
+          }°F`;
+        } else if (temperature.innerText.includes('F')) {
           temperature.innerText = `${Math.floor(data.main.temp)}°C`;
           feelsLike.innerText = `${Math.floor(data.main.feels_like)}°C`;
           maxTemp.innerText = `${Math.floor(data.main.temp_max)}°C`;
         }
-      }
-      
-      formSwitch.addEventListener('click', changeTemp)
+      };
+
+      formSwitch.addEventListener('click', changeTemp);
 
       if (sky.innerText.includes('clouds')) {
         icon.innerHTML = '<i class="fas fa-cloud-sun"></i>';
-        body.classList.add('body-clouds')
-        body.classList.remove('body-sun')
-        body.classList.remove('body-rain')
+        body.classList.add('body-clouds');
+        body.classList.remove('body-sun');
+        body.classList.remove('body-rain');
       } else if (sky.innerText.includes('rain')) {
         icon.innerHTML = '<i class="fas fa-cloud-rain"></i>';
-        body.classList.remove('body-clouds')
-        body.classList.remove('body-sun')
-        body.classList.add('body-rain')
+        body.classList.remove('body-clouds');
+        body.classList.remove('body-sun');
+        body.classList.add('body-rain');
       } else if (sky.innerText.includes('clear')) {
         icon.innerHTML = '<i class="fas fa-sun"></i>';
-        body.classList.remove('body-clouds')
-        body.classList.add('body-sun')
-        body.classList.remove('body-rain')
+        body.classList.remove('body-clouds');
+        body.classList.add('body-sun');
+        body.classList.remove('body-rain');
       }
-
     })
     .catch((err) => {
       alertWarning.classList.add('show');
