@@ -1,4 +1,4 @@
-const moment = require('moment');
+import moment from 'moment'
 
 const body = document.querySelector('body')
 const form = document.getElementById('form');
@@ -18,7 +18,7 @@ const visibility = document.querySelector('.visibility-text');
 const pressure = document.querySelector('.hpa-text');
 const icon = document.querySelector('.weather-icon');
 
-async function getWeatherData(url = '') {
+const getWeatherData = async (url = '') => {
   const response = await fetch(url);
   const weatherObj = await response.json();
   return weatherObj;
