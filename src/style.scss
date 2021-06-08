@@ -160,7 +160,12 @@ ul {
     font-size: 1rem;
   }
 
-  .temperature {
-    font-size: 60px;
+  .card {
+    .city-name {
+      font-size: 2rem;
+    }
+    .temperature {
+      font-size: 60px;
+    }
   }
 }

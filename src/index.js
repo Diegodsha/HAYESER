@@ -30,7 +30,7 @@ const searchWeather = (e) => {
     return;
   }
   getWeatherData(
-    `http://api.openweathermap.org/data/2.5/weather?q=${cityCountry[0]},${cityCountry[1]}&appid=b4a9c69d12afbe1ee38ffe1d3953a1c3&units=metric`
+    `https://api.openweathermap.org/data/2.5/weather?q=${cityCountry[0]},${cityCountry[1]}&appid=b4a9c69d12afbe1ee38ffe1d3953a1c3&units=metric`
   )
     .then((data) => {
       cityName.innerText = data.name;
