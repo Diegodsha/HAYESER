@@ -1,5 +1,5 @@
 # HAYESER (Have You Ever Seen Rain)
-Weather app with the forecast of over 200,000 countries
+Weather app with the forecast of over 200,000 countries.
 
 <p align="center">
   <a href="https://github.com/Diegodsha/HAYESER/issues">
