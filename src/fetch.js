@@ -36,33 +36,45 @@ const searchWeather = (e) => {
   }
   getWeatherData(`https://api.openweathermap.org/data/2.5/weather?q=${cityCountry[0]},${cityCountry[1]}&appid=b4a9c69d12afbe1ee38ffe1d3953a1c3&units=metric`)
     .then((data) => {
-      const formSwitch = document.querySelector('.form-switch');
+      const tempCelcius= `${Math.floor(data.main.temp)}°C`
+      const feelsLikeCelcius= `${Math.floor(data.main.feels_like)}°C`
+      const maxTempCelcius= `${Math.floor(data.main.temp_max)}°C`
+      const tempFar= `${(Math.floor(data.main.temp) * 9) / 5 + 32}°F`
+      const feelsLikeFar= `${(Math.floor(data.main.feels_like) * 9) / 5 + 32}°F`
+      const maxTempFar=`${(Math.floor(data.main.temp_max) * 9) / 5 + 32}°F`
+      const formSwitch = document.querySelector('.form-check-input');
+
       cityName.innerText = data.name;
       countryName.innerText = data.sys.country;
-      temperature.innerText = `${Math.floor(data.main.temp)}°C`;
+      temperature.innerText =tempCelcius;
       sky.innerText = data.weather['0'].description;
       humidity.innerText = `${data.main.humidity}%`;
-      feelsLike.innerText = `${Math.floor(data.main.feels_like)}°C`;
+      feelsLike.innerText = feelsLikeCelcius;
       windSpeed.innerText = `${data.wind.speed} m/s`;
-      maxTemp.innerText = `${Math.floor(data.main.temp_max)}°C`;
+      maxTemp.innerText = maxTempCelcius;
       visibility.innerText = `${data.visibility / 1000} km`;
       pressure.innerText = `${data.main.pressure}hPa`;
 
+      if (formSwitch.checked){
+        temperature.innerText =tempFar;
+        feelsLike.innerText = feelsLikeFar;
+        maxTemp.innerText = maxTempFar;
+      }else{
+        temperature.innerText =tempCelcius;
+        feelsLike.innerText = feelsLikeCelcius;
+        maxTemp.innerText = maxTempCelcius;
+
+      }
+
       const changeTemp = () => {
-        if (temperature.innerText.includes('C')) {
-          feelsLike.innerText = `${
-            (Math.floor(data.main.feels_like) * 9) / 5 + 32
-          }°F`;
-          temperature.innerText = `${
-            (Math.floor(data.main.temp) * 9) / 5 + 32
-          }°F`;
-          maxTemp.innerText = `${
-            (Math.floor(data.main.temp_max) * 9) / 5 + 32
-          }°F`;
-        } else if (temperature.innerText.includes('F')) {
-          temperature.innerText = `${Math.floor(data.main.temp)}°C`;
-          feelsLike.innerText = `${Math.floor(data.main.feels_like)}°C`;
-          maxTemp.innerText = `${Math.floor(data.main.temp_max)}°C`;
+        if (formSwitch.checked){
+          temperature.innerText =tempFar;
+          feelsLike.innerText = feelsLikeFar;
+          maxTemp.innerText = maxTempFar;
+        }else{
+          temperature.innerText =tempCelcius;
+          feelsLike.innerText = feelsLikeCelcius;
+          maxTemp.innerText = maxTempCelcius;
         }
       };
 
@@ -85,10 +97,11 @@ const searchWeather = (e) => {
         body.classList.remove('body-rain');
       }
     })
-    .catch(() => {
+    .catch((err) => {
       alertWarning.classList.add('show');
       cityName.innerText = 'City not found';
       countryName.classList.add('d-none');
+      console.log(err);
     });
 
   hour.innerText = moment().format('ddd, MMMM D , h:mm a');
