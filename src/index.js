@@ -7,5 +7,5 @@ const searchBtn = document.getElementById('search');
 searchBtn.addEventListener('click', searchWeather);
 
 window.onload = () => {
-  alert('Search city and country separated by comma, e.g: Seatle, US');
+  alert('Search city and country separated by comma, e.g: Seattle, US');
 };
